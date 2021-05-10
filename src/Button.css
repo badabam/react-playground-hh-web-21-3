@@ -6,6 +6,6 @@
   border-radius: 4px;
 }
 
-.active {
+.Button.active {
   background: hotpink;
 }
