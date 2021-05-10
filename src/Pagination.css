@@ -1,0 +1,8 @@
+.Pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Pagination button.active {
+  background: hotpink;
+}
