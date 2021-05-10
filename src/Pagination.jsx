@@ -1,12 +1,13 @@
 import * as React from 'react'
 import './Pagination.css'
+import Button from './Button'
 
 export default function Pagination({ text, isLeftDisabled, isRightDisabled }) {
   return (
     <section className="Pagination">
-      <button className={isLeftDisabled ? '' : 'active'}>&lt;</button>
+      <Button isActive={!isLeftDisabled}>&lt;</Button>
       {text}
-      <button className={isRightDisabled ? '' : 'active'}>&gt;</button>
+      <Button isActive={!isRightDisabled}>&gt;</Button>
     </section>
   )
 }
