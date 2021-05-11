@@ -1,11 +1,12 @@
 import * as React from 'react'
-import Button from './Button'
+import Card from './Card'
+import './App.css'
 
 export default () => {
   return (
-    <div>
-      <Button isActive={true}>Active</Button>
-      <Button isActive={false}>Not active</Button>
+    <div className="App">
+      <Card title="Hello world" copyText="How are you?" />
+      <Card isBookmarked title="Hi again" copyText="I am great" />
     </div>
   )
 }
