@@ -1,63 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { saveToLocal, loadFromLocal } from './lib/localStorage'
 import './App.css'
 
-export default () => {
-  const [box, setBox] = useState({
-    size: '10',
-    hue: '0',
-    radius: '0',
-  })
+export default function App() {
+  const [users, setUsers] = useState(loadFromLocal('users') ?? [])
+  const [url, setUrl] = useState('https://reqres.in/api/users')
 
-  const { size, hue, radius } = box
+  useEffect(() => {
+    fetch(url)
+      .then(res => res.json())
+      .then(resBody => setUsers([...users, ...resBody.data]))
+  }, [url])
 
-  const style = {
-    width: size + 'px',
-    height: size + 'px',
-    borderRadius: radius + '%',
-    backgroundColor: `hsl(${hue}deg, 70%, 70%)`,
-  }
+  useEffect(() => {
+    saveToLocal('users', users)
+  }, [users])
 
   return (
     <div className="App">
-      <label>
-        Size:{' '}
-        <input
-          value={size}
-          name="size"
-          onChange={handleChange}
-          type="range"
-          max="200"
-        />
-      </label>
-      <label>
-        Color:{' '}
-        <input
-          value={hue}
-          name="hue"
-          onChange={handleChange}
-          type="range"
-          max="359"
-        />
-      </label>
-      <label>
-        Radius:{' '}
-        <input
-          value={radius}
-          name="radius"
-          onChange={handleChange}
-          type="range"
-          max="50"
-        />
-      </label>
-      <div style={style} className="Box" />
+      <button onClick={() => setUrl('https://reqres.in/api/users?page=2')}>
+        Change url
+      </button>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>{user.first_name}</li>
+        ))}
+      </ul>
     </div>
   )
-
-  function handleChange(event) {
-    const input = event.target
-    setBox({
-      ...box,
-      [input.name]: input.value,
-    })
-  }
 }
