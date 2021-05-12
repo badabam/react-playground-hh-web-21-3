@@ -2,12 +2,18 @@ import React, { useState } from 'react'
 import './App.css'
 
 export default () => {
-  const [size, setSize] = useState('100')
-  const [hue, setHue] = useState('0')
+  const [box, setBox] = useState({
+    size: '10',
+    hue: '0',
+    radius: '0',
+  })
+
+  const { size, hue, radius } = box
 
   const style = {
     width: size + 'px',
     height: size + 'px',
+    borderRadius: radius + '%',
     backgroundColor: `hsl(${hue}deg, 70%, 70%)`,
   }
 
@@ -17,26 +23,41 @@ export default () => {
         Size:{' '}
         <input
           value={size}
-          onChange={handleSizeChange}
+          name="size"
+          onChange={handleChange}
           type="range"
           max="200"
         />
       </label>
       <label>
         Color:{' '}
-        <input value={hue} onChange={handleHueChange} type="range" max="359" />
+        <input
+          value={hue}
+          name="hue"
+          onChange={handleChange}
+          type="range"
+          max="359"
+        />
+      </label>
+      <label>
+        Radius:{' '}
+        <input
+          value={radius}
+          name="radius"
+          onChange={handleChange}
+          type="range"
+          max="50"
+        />
       </label>
       <div style={style} className="Box" />
     </div>
   )
 
-  function handleSizeChange(event) {
+  function handleChange(event) {
     const input = event.target
-    setSize(input.value)
-  }
-
-  function handleHueChange(event) {
-    const input = event.target
-    setHue(input.value)
+    setBox({
+      ...box,
+      [input.name]: input.value,
+    })
   }
 }
