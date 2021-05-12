@@ -1,28 +1,36 @@
-import * as React from 'react'
-import Card from './Card'
+import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import './App.css'
 
-const cards = [
-  { title: 'Hello world', text: 'How are you?', isBookmarked: false, id: 1 },
-  {
-    title: 'Hi again',
-    text: 'I am great, thank you',
-    isBookmarked: true,
-    id: 2,
-  },
-]
-
 export default () => {
+  const [todos, setTodos] = useState([])
   return (
     <div className="App">
-      {cards.map(({ id, title, text, isBookmarked }) => (
-        <Card
-          key={id}
-          title={title}
-          copyText={text}
-          isBookmarked={isBookmarked}
-        />
-      ))}
+      <form onSubmit={handleSubmit}>
+        <label>
+          Add todo:
+          <input name="todo" type="text" />
+        </label>
+        <button>Add</button>
+      </form>
+      <ul>
+        {todos.map(({ text, isDone, id }) => (
+          <li key={id}>
+            {text} {isDone && '✅'}
+          </li>
+        ))}
+      </ul>
     </div>
   )
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    const form = event.target
+    const input = form.elements.todo
+    // spread operator `...todos`
+    const newTodo = { text: input.value, isDone: false, id: uuidv4() }
+    setTodos([newTodo, ...todos])
+    form.reset()
+    input.focus()
+  }
 }
