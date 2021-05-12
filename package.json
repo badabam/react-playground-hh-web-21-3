@@ -10,8 +10,10 @@
   "author": "Jeremias Erbs <jerry@badabam.de> (https://badabam.de/)",
   "license": "ISC",
   "dependencies": {
+    "html-entities": "2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "uuid": "8.3.2",
     "vite": "2.2.4"
   }
 }

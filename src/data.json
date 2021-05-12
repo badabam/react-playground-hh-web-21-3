@@ -1,0 +1,98 @@
+[
+  {
+    "category": "Science & Nature",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which Apollo mission was the first one to land on the Moon?",
+    "correct_answer": "Apollo 11",
+    "incorrect_answers": ["Apollo 10", "Apollo 9", "Apollo 13"]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which Greek letter represents the &quot;Half-Life&quot; logo?",
+    "correct_answer": "Lambda",
+    "incorrect_answers": ["Omega", "Alpha", "Sigma"]
+  },
+  {
+    "category": "Entertainment: Cartoon & Animations",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a catchphrase used by Rick Sanchez in the TV show &quot;Rick and Morty&quot;?",
+    "correct_answer": "Slam dunk, nothing but net!",
+    "incorrect_answers": [
+      "Hit the sack, Jack!",
+      "Rikki-Tikki-Tavi, biatch!",
+      "Wubba-lubba-dub-dub!"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "In Mean Girls, who has breasts that tell when it&#039;s raining?",
+    "correct_answer": "Karen Smith",
+    "incorrect_answers": ["Gretchen Weiners", "Janice Ian", "Cady Heron"]
+  },
+  {
+    "category": "Animals",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is Grumpy Cat&#039;s real name?",
+    "correct_answer": "Tardar Sauce",
+    "incorrect_answers": ["Sauce", "Minnie", "Broccoli"]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "The name of the Metroid series comes from what?",
+    "correct_answer": "An enemy in the game",
+    "incorrect_answers": [
+      "The final boss&#039;s name",
+      "The main character&#039;s name",
+      "A spaceship&#039;s name"
+    ]
+  },
+  {
+    "category": "Entertainment: Comics",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "What is the alter-ego of the DC comics character &quot;Superman&quot;?",
+    "correct_answer": "Clark Kent",
+    "incorrect_answers": ["Bruce Wayne", "Arthur Curry", "John Jones"]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "How many strings are there on a cello?",
+    "correct_answer": "4",
+    "incorrect_answers": ["5", "6", "8"]
+  },
+  {
+    "category": "Entertainment: Video Games",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which Grand Theft Auto (GTA) games have the same setting?",
+    "correct_answer": "GTA V and GTA San Andreas",
+    "incorrect_answers": [
+      "GTA V and GTA Vice City",
+      "GTA IV and GTA San Andreas",
+      "GTA IV and GTA Vice City"
+    ]
+  },
+  {
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "Which of the following is an album by punk rock band Anti-Flag?",
+    "correct_answer": "For Blood And Empire",
+    "incorrect_answers": [
+      "Infinity On High",
+      "21st Century Breakdown",
+      "No Pads, No Helmets...Just Balls"
+    ]
+  }
+]
